@@ -44,7 +44,12 @@ header {
     width: 80%;
     max-width: 800px;
     height: 400px;
-    margin-top: 50px;
+    margin: 50px auto; /* Centers the carousel horizontally */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px; /* Optional: Adds some breathing space */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Light shadow for depth */
 }
 
 .carousel-image {
