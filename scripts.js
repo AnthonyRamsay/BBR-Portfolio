@@ -3,6 +3,7 @@ const images = document.querySelectorAll(".carousel-image");
 
 function showImage(index) {
     images.forEach((img, i) => {
+        img.style.opacity = i === index ? "1" : "0";
         img.style.display = i === index ? "block" : "none";
     });
 }
@@ -24,9 +25,13 @@ function filterProjects(category) {
     const items = document.querySelectorAll('.work-item');
     const buttons = document.querySelectorAll('.filter-menu button');
     
-    // Highlight active category
+    // Highlight the active category button
     buttons.forEach(button => {
-        button.classList.toggle('active', button.textContent.toLowerCase().includes(category));
+        if (button.textContent.toLowerCase().includes(category)) {
+            button.classList.add('active');
+        } else {
+            button.classList.remove('active');
+        }
     });
 
     // Filter projects
