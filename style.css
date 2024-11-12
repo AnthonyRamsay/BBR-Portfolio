@@ -38,8 +38,8 @@ header {
     font-weight: bold;
 }
 
-/* Underline 'Work' in the header */
-.nav-links a[href="work.html"] {
+/* Underline 'Work' only on the Work page */
+.active-link {
     text-decoration: underline;
 }
 
@@ -108,7 +108,7 @@ h1 {
     font-size: 2em;
 }
 
-/* Cleaner Category Buttons */
+/* Filter Menu and Active Category Button */
 .filter-menu {
     display: flex;
     justify-content: center;
@@ -119,16 +119,22 @@ h1 {
     background-color: transparent;
     color: #333;
     font-size: 0.9em;
-    font-weight: bold;
+    font-weight: normal;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
     transition: color 0.3s;
 }
 
-.filter-menu button:hover,
+.filter-menu button:hover {
+    color: blue;
+}
+
+/* Active category button style */
 .filter-menu button.active {
-    color: blue; /* Adjust to your highlight color */
+    color: blue;
+    font-weight: bold;
+    border-bottom: 2px solid blue;
 }
 
 /* Work Grid and Items */
