@@ -100,3 +100,49 @@ footer {
     text-align: center;
     color: #777;
 }
+
+
+/* Work Page Styles */
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 2em;
+}
+
+.filter-menu {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.filter-menu button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+.filter-menu button:hover {
+    background-color: #ddd;
+}
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.work-item {
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.work-item img {
+    max-width: 100%;
+    height: auto;
+}
