@@ -38,27 +38,32 @@ header {
     font-weight: bold;
 }
 
+/* Underline 'Work' in the header */
+.nav-links a[href="work.html"] {
+    text-decoration: underline;
+}
+
 /* Carousel styling */
 .carousel {
     position: relative;
     width: 80%;
     max-width: 800px;
     height: 400px;
-    margin: 50px auto; /* Centers the carousel horizontally */
+    margin: 50px auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px; /* Optional: Adds some breathing space */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Light shadow for depth */
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .carousel-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: opacity 0.5s ease;
 }
 
-/* Refine arrow button styles */
 .carousel-arrow {
     position: absolute;
     top: 50%;
@@ -80,17 +85,12 @@ header {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* Smooth transition for images */
-.carousel-image {
-    transition: opacity 0.5s ease;
-}
-
 .carousel-arrow.left {
-    left: -20px; /* Adjust to move it outside the image area if needed */
+    left: -20px;
 }
 
 .carousel-arrow.right {
-    right: -20px; /* Adjust to move it outside the image area if needed */
+    right: -20px;
 }
 
 /* Footer styling */
@@ -101,7 +101,6 @@ footer {
     color: #777;
 }
 
-
 /* Work Page Styles */
 h1 {
     text-align: center;
@@ -109,6 +108,7 @@ h1 {
     font-size: 2em;
 }
 
+/* Cleaner Category Buttons */
 .filter-menu {
     display: flex;
     justify-content: center;
@@ -116,18 +116,22 @@ h1 {
 }
 
 .filter-menu button {
-    margin: 0 10px;
+    background-color: transparent;
+    color: #333;
+    font-size: 0.9em;
+    font-weight: bold;
+    border: none;
     padding: 10px 20px;
     cursor: pointer;
-    border: none;
-    background-color: #f0f0f0;
-    font-weight: bold;
+    transition: color 0.3s;
 }
 
-.filter-menu button:hover {
-    background-color: #ddd;
+.filter-menu button:hover,
+.filter-menu button.active {
+    color: blue; /* Adjust to your highlight color */
 }
 
+/* Work Grid and Items */
 .work-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -137,12 +141,17 @@ h1 {
 
 .work-item {
     text-align: center;
-    border: 1px solid #ddd;
-    padding: 10px;
-    background-color: #f9f9f9;
+    background: none;
+    padding: 0;
 }
 
 .work-item img {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    border: none;
+    box-shadow: none;
+}
+
+.work-item p {
+    font-size: 0.8em; /* Smaller font */
+    color: #333;
 }
