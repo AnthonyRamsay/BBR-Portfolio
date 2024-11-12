@@ -19,3 +19,14 @@ function previousImage() {
 
 // Initial display
 showImage(currentImageIndex);
+
+function filterProjects(category) {
+    const items = document.querySelectorAll('.work-item');
+    items.forEach(item => {
+        if (category === 'all' || item.classList.contains(category)) {
+            item.style.display = 'block';
+        } else {
+            item.style.display = 'none';
+        }
+    });
+}
