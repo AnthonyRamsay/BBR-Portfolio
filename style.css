@@ -1,11 +1,10 @@
-/* Reset default margin/padding */
+/* General Reset and Base Styling */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* General styling */
 body {
     font-family: Arial, sans-serif;
     background-color: white;
@@ -16,6 +15,7 @@ body {
     justify-content: center;
 }
 
+/* Header */
 header {
     width: 100%;
     padding: 20px;
@@ -45,6 +45,7 @@ header {
 .filter-menu {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; /* Wrap buttons on smaller screens */
     margin: 20px 0;
 }
 
@@ -76,19 +77,19 @@ header {
 /* Work Container */
 .work-container {
     text-align: center;
-    width: 80%;
+    width: 90%; /* More flexible width */
     max-width: 800px;
     margin: 0 auto;
 }
 
 .work-section {
-    display: block; /* All sections visible by default */
+    display: block; /* Default to visible */
     margin-bottom: 40px;
     text-align: center;
 }
 
 .work-section.hidden {
-    display: none; /* Hide inactive sections */
+    display: none; /* Hidden sections */
 }
 
 .work-section h2 {
@@ -101,4 +102,67 @@ header {
     font-size: 1em;
     margin: 5px 0;
     color: #555;
+}
+
+/* --- Responsive Styling --- */
+
+/* For tablets (width ≤ 768px) */
+@media (max-width: 768px) {
+    .filter-menu button {
+        font-size: 0.9em;
+        padding: 8px 15px;
+    }
+
+    .work-section h2 {
+        font-size: 1.2em;
+    }
+
+    .work-section p {
+        font-size: 0.9em;
+    }
+}
+
+/* For mobile (width ≤ 480px) */
+@media (max-width: 480px) {
+    header {
+        flex-direction: column; /* Stack logo and nav-links */
+        text-align: center;
+    }
+
+    .logo {
+        margin-bottom: 15px;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap; /* Wrap navigation links */
+        justify-content: center;
+    }
+
+    .nav-links a {
+        margin: 5px;
+        font-size: 0.9em;
+    }
+
+    .filter-menu {
+        flex-direction: column; /* Stack buttons */
+        align-items: center;
+    }
+
+    .filter-menu button {
+        width: 80%; /* Make buttons full-width */
+        margin-bottom: 10px;
+    }
+
+    .work-container {
+        width: 95%; /* Narrower for small screens */
+    }
+
+    .work-section h2 {
+        font-size: 1em;
+    }
+
+    .work-section p {
+        font-size: 0.8em;
+    }
 }
