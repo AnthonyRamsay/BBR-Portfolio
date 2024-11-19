@@ -1,38 +1,57 @@
-/* General work section styles */
-.work-container {
-    text-align: center;
-    margin: 20px auto;
-    width: 80%;
-    max-width: 800px;
+/* Reset default margin/padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.work-section {
-    display: none; /* Initially hide all sections */
-    margin-bottom: 40px;
-}
-
-.work-section.active {
-    display: block; /* Only show active section */
-}
-
-/* Section headings */
-.work-section h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
     color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Filter menu styles */
+header {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: blue;
+}
+
+.nav-links a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.active-link {
+    text-decoration: underline;
+}
+
+/* Filter Menu */
 .filter-menu {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
+    margin: 20px 0;
 }
 
 .filter-menu button {
     background-color: transparent;
     color: #333;
-    font-size: 0.9em;
+    font-size: 1em;
     font-weight: bold;
     border: none;
     padding: 10px 20px;
@@ -52,4 +71,34 @@
 .filter-menu button.inactive {
     opacity: 0.5;
     pointer-events: none;
+}
+
+/* Work Container */
+.work-container {
+    text-align: center;
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.work-section {
+    display: block; /* All sections visible by default */
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.work-section.hidden {
+    display: none; /* Hide inactive sections */
+}
+
+.work-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.work-section p {
+    font-size: 1em;
+    margin: 5px 0;
+    color: #555;
 }
