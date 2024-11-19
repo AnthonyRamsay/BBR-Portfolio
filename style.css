@@ -1,114 +1,28 @@
-/* Reset default margin/padding */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* General body styling */
-body {
-    font-family: Arial, sans-serif;
-    background-color: white;
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Header styling */
-header {
-    width: 100%;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: blue;
-}
-
-.nav-links a {
-    margin-left: 15px;
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
-
-/* Underline 'Work' only on the Work page */
-.active-link {
-    text-decoration: underline;
-}
-
-/* Carousel styling */
-.carousel {
-    position: relative;
+/* General work section styles */
+.work-container {
+    text-align: center;
+    margin: 20px auto;
     width: 80%;
     max-width: 800px;
-    height: 400px;
-    margin: 50px auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.carousel-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: opacity 0.5s ease;
+.work-section {
+    display: none; /* Initially hide all sections */
+    margin-bottom: 40px;
 }
 
-.carousel-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: background-color 0.3s;
+.work-section.active {
+    display: block; /* Only show active section */
 }
 
-.carousel-arrow:hover {
-    background-color: rgba(0, 0, 0, 0.7);
+/* Section headings */
+.work-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
 }
 
-.carousel-arrow.left {
-    left: -20px;
-}
-
-.carousel-arrow.right {
-    right: -20px;
-}
-
-/* Footer styling */
-footer {
-    margin-top: 50px;
-    padding: 20px;
-    text-align: center;
-    color: #777;
-}
-
-/* Work Page Styles */
-h1 {
-    text-align: center;
-    margin: 20px 0;
-    font-size: 2em;
-}
-
-/* Filter Menu and Active Category Button */
+/* Filter menu styles */
 .filter-menu {
     display: flex;
     justify-content: center;
@@ -119,45 +33,23 @@ h1 {
     background-color: transparent;
     color: #333;
     font-size: 0.9em;
-    font-weight: normal;
+    font-weight: bold;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
-    transition: color 0.3s;
+    transition: color 0.3s, opacity 0.3s;
 }
 
 .filter-menu button:hover {
     color: blue;
 }
 
-/* Active category button style */
 .filter-menu button.active {
     color: blue;
-    font-weight: bold;
     border-bottom: 2px solid blue;
 }
 
-/* Work Grid and Items */
-.work-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 20px;
-}
-
-.work-item {
-    text-align: center;
-    background: none;
-    padding: 0;
-}
-
-.work-item img {
-    width: 100%;
-    border: none;
-    box-shadow: none;
-}
-
-.work-item p {
-    font-size: 0.8em; /* Smaller font */
-    color: #333;
+.filter-menu button.inactive {
+    opacity: 0.5;
+    pointer-events: none;
 }
