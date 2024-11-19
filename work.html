@@ -19,20 +19,38 @@
 
     <main>
         <div class="filter-menu">
-            <button onclick="filterProjects('all')">All</button>
-            <button onclick="filterProjects('product')">Product Design</button>
-            <button onclick="filterProjects('graphic')">Graphic/Web Design</button>
-            <button onclick="filterProjects('software')">Product/Software Development</button>
-            <button onclick="filterProjects('photography')">Photography</button>
-            <button onclick="filterProjects('music')">Sound Design/Music</button>
+            <button onclick="filterProjects('all')">Product Design</button>
+            <button onclick="filterProjects('graphic')">Graphic Design</button>
+            <button onclick="filterProjects('software')">Software Development</button>
+            <button onclick="filterProjects('sound')">Sound Design</button>
+            <button onclick="filterProjects('photo')">Photography</button>
         </div>
-        <div class="work-grid">
-            <div class="work-item product"><img src="https://via.placeholder.com/300x200" alt="Product Design"><p>Product Design Project</p></div>
-            <div class="work-item graphic"><img src="https://via.placeholder.com/300x200" alt="Graphic Design"><p>Graphic/Web Design Project</p></div>
-            <div class="work-item software"><img src="https://via.placeholder.com/300x200" alt="Software Development"><p>Software Development Project</p></div>
-            <div class="work-item photography"><img src="https://via.placeholder.com/300x200" alt="Photography"><p>Photography Project</p></div>
-            <div class="work-item music"><img src="https://via.placeholder.com/300x200" alt="Music Project"><p>Sound Design/Music Project</p></div>
-            <!-- Add more work-item divs as needed -->
+        <div class="work-container">
+            <section class="work-section product">
+                <h2>Product Design</h2>
+                <p>Project 1: Amazing Product Design</p>
+                <p>Project 2: Another Cool Product</p>
+            </section>
+            <section class="work-section graphic">
+                <h2>Graphic Design</h2>
+                <p>Project 1: Stunning Graphic Work</p>
+                <p>Project 2: Creative Poster</p>
+            </section>
+            <section class="work-section software">
+                <h2>Software Development</h2>
+                <p>Project 1: Innovative App</p>
+                <p>Project 2: Software Solution</p>
+            </section>
+            <section class="work-section sound">
+                <h2>Sound Design</h2>
+                <p>Project 1: Experimental Track</p>
+                <p>Project 2: Music Composition</p>
+            </section>
+            <section class="work-section photo">
+                <h2>Photography</h2>
+                <p>Project 1: Portrait Series</p>
+                <p>Project 2: Landscape Shoots</p>
+            </section>
         </div>
     </main>
 
