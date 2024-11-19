@@ -1,7 +1,8 @@
 function filterProjects(category) {
     const sections = document.querySelectorAll('.work-section');
     const buttons = document.querySelectorAll('.filter-menu button');
-    
+
+    // Update button styles
     buttons.forEach(button => {
         if (button.textContent.toLowerCase().includes(category) || category === 'all') {
             button.classList.add('active');
@@ -12,11 +13,12 @@ function filterProjects(category) {
         }
     });
 
+    // Show or hide sections
     sections.forEach(section => {
         if (section.classList.contains(category) || category === 'all') {
-            section.classList.add('active');
+            section.classList.remove('hidden');
         } else {
-            section.classList.remove('active');
+            section.classList.add('hidden');
         }
     });
 }
