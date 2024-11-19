@@ -18,13 +18,17 @@
     </header>
 
     <main>
+        <!-- Filter Menu -->
         <div class="filter-menu">
-            <button onclick="filterProjects('all')">Product Design</button>
+            <button onclick="filterProjects('all')" class="active">All</button>
+            <button onclick="filterProjects('product')">Product Design</button>
             <button onclick="filterProjects('graphic')">Graphic Design</button>
             <button onclick="filterProjects('software')">Software Development</button>
             <button onclick="filterProjects('sound')">Sound Design</button>
             <button onclick="filterProjects('photo')">Photography</button>
         </div>
+
+        <!-- Work Sections -->
         <div class="work-container">
             <section class="work-section product">
                 <h2>Product Design</h2>
