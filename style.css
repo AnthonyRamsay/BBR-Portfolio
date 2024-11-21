@@ -1,3 +1,6 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
 /* Reset default margin/padding */
 * {
     margin: 0;
@@ -7,7 +10,7 @@
 
 /* General body styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif; /* Clean and modern font */
     background-color: white;
     color: #333;
     line-height: 1.6;
@@ -27,13 +30,13 @@ header {
     align-items: center;
 }
 
-/* Logo Styling */
+/* Logo styling */
 .logo a {
-    text-decoration: none; /* Removes the underline */
-    font-family: 'Arial Black', sans-serif; /* Change font to bold and clean */
-    text-transform: uppercase; /* Make all text uppercase */
-    color: black; /* Ensure it stays black */
-    font-weight: bold; /* Always bold */
+    text-decoration: none; /* Removes underline */
+    font-family: 'Arial Black', sans-serif; /* Bold, clean look */
+    text-transform: uppercase; /* Make it all caps */
+    color: black; /* Always black */
+    font-weight: bold; /* Keep it bold */
 }
 
 .logo a:visited,
@@ -42,55 +45,61 @@ header {
     color: black; /* Prevent color change on click or hover */
 }
 
+/* Navigation links styling */
 .nav-links {
     display: flex;
     align-items: center;
 }
 
 .nav-links a {
-    margin-left: 15px;
-    text-decoration: none;
+    font-family: 'Open Sans', sans-serif; /* Match body font */
+    font-size: 1em; /* Easy-to-read size */
     color: #333;
-    font-weight: bold;
+    text-decoration: none; /* No underline */
+    margin-left: 15px;
+    font-weight: 400; /* Regular weight (not bold) */
+    transition: color 0.3s ease; /* Smooth hover effect */
 }
 
 .nav-links a:hover {
-    text-decoration: underline;
+    color: #666; /* Slightly darker on hover for subtle effect */
 }
 
 /* Slideshow container */
 .slideshow {
     position: relative;
     max-width: 1200px;
-    height: 600px; /* Adjust to your preference */
+    height: 600px; /* Fixed height for images */
     margin: 20px auto;
-    overflow: hidden; /* Hide non-active slides */
+    overflow: hidden; /* Hide overflow to prevent excess display */
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f5f5f5;
+    background-color: #f5f5f5; /* Neutral background color */
 }
 
+/* Slideshow images */
 .slide {
     position: absolute;
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Fit within the container */
-    opacity: 0; /* Hide all slides by default */
-    transition: opacity 1s ease-in-out;
+    object-fit: contain; /* Ensure images scale to fit container */
+    opacity: 0; /* Hidden by default */
+    transition: opacity 1s ease-in-out; /* Smooth fade-in transition */
 }
 
 .slide.active {
-    opacity: 1; /* Show only the active slide */
+    opacity: 1; /* Show the active image */
 }
 
-/* Footer */
+/* Footer Styling */
 footer {
     margin-top: 20px;
     padding: 10px;
     text-align: center;
     font-size: 0.9em;
-    color: #555;
+    color: #555; /* Softer tone for footer */
+    font-family: 'Open Sans', sans-serif; /* Keep consistent with body text */
 }
 
 /* Responsive Styling */
