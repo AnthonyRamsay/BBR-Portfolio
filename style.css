@@ -64,13 +64,12 @@ header {
 
 /* Slideshow images */
 .slide {
-    position: absolute;
-    width: auto; /* Maintain aspect ratio */
-    max-width: 100%; /* Prevent image from exceeding container width */
-    max-height: 100%; /* Prevent image from exceeding container height */
-    margin: auto; /* Center the image */
-    opacity: 0; /* Hidden by default */
-    transition: opacity 1s ease-in-out; /* Smooth fade-in effect */
+    width: auto;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    opacity: 1; /* Force visibility */
+    position: static; /* Ignore absolute positioning */
 }
 
 .slide.active {
