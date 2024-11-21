@@ -60,8 +60,7 @@ header {
 .slideshow {
     position: relative;
     width: 80%; /* Contain within 80% of the page width */
-    height: auto; /* Maintain the aspect ratio */
-    max-height: 500px; /* Limit the maximum height */
+    max-width: 1000px; /* Optional: Limit the max width */
     margin: 20px auto;
     overflow: hidden;
     display: flex;
@@ -75,20 +74,15 @@ header {
 /* Individual slides */
 .slide {
     display: none;
-    width: 100%;
-    height: auto;
-    text-align: center;
+    width: auto; /* Allow natural width */
+    height: auto; /* Allow natural height */
+    max-width: 100%; /* Shrink large images to fit container */
+    max-height: 500px; /* Prevent tall images from expanding the container */
+    margin: auto;
+    object-fit: contain; /* Ensure images scale proportionally */
 }
 
 .slide.active {
-    display: block;
-}
-
-.slide img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain; /* Ensure images scale proportionally */
-    margin: auto;
     display: block;
 }
 
@@ -114,11 +108,11 @@ header {
 }
 
 .arrow.left {
-    left: -40px; /* Place arrow outside the frame */
+    left: -40px;
 }
 
 .arrow.right {
-    right: -40px; /* Place arrow outside the frame */
+    right: -40px;
 }
 
 /* Footer Styling */
@@ -136,15 +130,15 @@ footer {
 /* For tablets (width ≤ 768px) */
 @media (max-width: 768px) {
     .slideshow {
-        max-height: 400px; /* Adjust height for smaller screens */
+        max-width: 90%; /* Adjust for smaller screens */
     }
 
-    .logo {
-        font-size: 20px;
+    .arrow.left {
+        left: -20px;
     }
 
-    .nav-links a {
-        font-size: 0.9em;
+    .arrow.right {
+        right: -20px;
     }
 }
 
@@ -155,19 +149,19 @@ footer {
         text-align: center;
     }
 
-    .slideshow {
-        max-height: 300px; /* Adjust height for very small screens */
-    }
-
     .nav-links a {
         font-size: 0.8em;
     }
 
+    .slideshow {
+        max-width: 100%;
+    }
+
     .arrow.left {
-        left: -20px; /* Adjust for smaller screen */
+        left: -15px;
     }
 
     .arrow.right {
-        right: -20px; /* Adjust for smaller screen */
+        right: -15px;
     }
 }
