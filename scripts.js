@@ -21,18 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
         updateSlide(currentSlide);
     }
 
-    // Event listeners for keyboard arrows
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowRight') {
-            showNextSlide();
-        } else if (e.key === 'ArrowLeft') {
-            showPreviousSlide();
-        }
-    });
-
-    // Automatic slideshow every 12 seconds
-    setInterval(showNextSlide, 12000);
-
     // Initialize the first slide
     updateSlide(currentSlide);
+
+    // Expose functions globally for button use
+    window.showNextSlide = showNextSlide;
+    window.showPreviousSlide = showPreviousSlide;
 });
