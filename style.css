@@ -1,21 +1,24 @@
-/* General Reset and Base Styling */
+/* Reset default margin/padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* General body styling */
 body {
     font-family: Arial, sans-serif;
     background-color: white;
     color: #333;
+    line-height: 1.6;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 0;
 }
 
-/* Header */
+/* Header styling */
 header {
     width: 100%;
     padding: 20px;
@@ -30,6 +33,11 @@ header {
     color: blue;
 }
 
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
 .nav-links a {
     margin-left: 15px;
     text-decoration: none;
@@ -37,11 +45,49 @@ header {
     font-weight: bold;
 }
 
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
 .active-link {
     text-decoration: underline;
 }
 
-/* Filter Menu */
+/* Hero section for homepage */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 1200px; /* Contain image within max width */
+    height: auto; /* Maintain aspect ratio */
+    margin: 20px auto; /* Center the image and add spacing */
+    display: block;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.home-container p {
+    font-size: 1.2em;
+    color: #555;
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* Filter Menu (used for Work tab) */
 .filter-menu {
     display: flex;
     justify-content: center;
@@ -77,7 +123,7 @@ header {
 /* Work Container */
 .work-container {
     text-align: center;
-    width: 90%; /* More flexible width */
+    width: 90%;
     max-width: 800px;
     margin: 0 auto;
 }
@@ -104,7 +150,7 @@ header {
     color: #555;
 }
 
-/* --- Responsive Styling --- */
+/* Responsive Styling */
 
 /* For tablets (width ≤ 768px) */
 @media (max-width: 768px) {
@@ -119,6 +165,15 @@ header {
 
     .work-section p {
         font-size: 0.9em;
+    }
+
+    .hero-image {
+        max-width: 90%;
+    }
+
+    .home-container p {
+        font-size: 1em;
+        padding: 0 10px;
     }
 }
 
