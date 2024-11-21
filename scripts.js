@@ -1,14 +1,14 @@
 const slides = document.querySelectorAll('.slide');
 let currentSlide = 0;
 
-// Function to show the next slide
+// Show the next slide
 function showNextSlide() {
     slides[currentSlide].classList.remove('active');
     currentSlide = (currentSlide + 1) % slides.length; // Loop back to the first slide
     slides[currentSlide].classList.add('active');
 }
 
-// Function to show the previous slide
+// Show the previous slide
 function showPreviousSlide() {
     slides[currentSlide].classList.remove('active');
     currentSlide = (currentSlide - 1 + slides.length) % slides.length; // Loop to the last slide
