@@ -1,27 +1,28 @@
-function filterProjects(category) {
-    const sections = document.querySelectorAll('.work-section');
-    const buttons = document.querySelectorAll('.filter-menu button');
+const slides = document.querySelectorAll('.slide');
+let currentSlide = 0;
 
-    // Update button styles
-    buttons.forEach(button => {
-        if (button.textContent.toLowerCase().includes(category) || category === 'all') {
-            button.classList.add('active');
-            button.classList.remove('inactive');
-        } else {
-            button.classList.remove('active');
-            button.classList.add('inactive');
-        }
-    });
-
-    // Show or hide sections
-    sections.forEach(section => {
-        if (section.classList.contains(category) || category === 'all') {
-            section.classList.remove('hidden');
-        } else {
-            section.classList.add('hidden');
-        }
-    });
+// Function to show the next slide
+function showNextSlide() {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % slides.length; // Loop back to the first slide
+    slides[currentSlide].classList.add('active');
 }
 
-// Default to showing all
-filterProjects('all');
+// Function to show the previous slide
+function showPreviousSlide() {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length; // Loop to the last slide
+    slides[currentSlide].classList.add('active');
+}
+
+// Automatic slideshow every 12 seconds
+setInterval(showNextSlide, 12000);
+
+// Keyboard navigation for slideshow
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowRight') {
+        showNextSlide();
+    } else if (event.key === 'ArrowLeft') {
+        showPreviousSlide();
+    }
+});
