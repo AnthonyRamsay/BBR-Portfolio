@@ -27,10 +27,19 @@ header {
     align-items: center;
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: blue;
+/* Logo Styling */
+.logo a {
+    text-decoration: none; /* Removes the underline */
+    font-family: 'Arial Black', sans-serif; /* Change font to bold and clean */
+    text-transform: uppercase; /* Make all text uppercase */
+    color: black; /* Ensure it stays black */
+    font-weight: bold; /* Always bold */
+}
+
+.logo a:visited,
+.logo a:hover,
+.logo a:focus {
+    color: black; /* Prevent color change on click or hover */
 }
 
 .nav-links {
