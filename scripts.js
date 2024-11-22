@@ -2,20 +2,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const slides = document.querySelectorAll('.slide');
     let currentSlide = 0;
 
-    // Function to update slides
+    // Function to update the active slide
     function updateSlide(index) {
         slides.forEach((slide, i) => {
             slide.classList.toggle('active', i === index);
         });
     }
 
-    // Change slide based on direction
-    window.changeSlide = (direction) => {
+    // Function to change the slide
+    function changeSlide(direction) {
         currentSlide = (currentSlide + direction + slides.length) % slides.length;
         updateSlide(currentSlide);
-    };
+    }
 
-    // Keyboard Navigation
+    // Add keyboard event listeners for left/right arrows
     document.addEventListener('keydown', (event) => {
         if (event.key === 'ArrowLeft') {
             changeSlide(-1);
@@ -24,6 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Initialize first slide
+    // Initialize the first slide
     updateSlide(currentSlide);
 });
