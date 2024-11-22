@@ -14,9 +14,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between; /* Space between content */
-    min-height: 100vh; /* Ensure footer stays at the bottom */
-    padding: 0;
+    justify-content: space-between;
+    min-height: 100vh; /* Ensures footer is at the bottom */
 }
 
 /* Header styling */
@@ -60,9 +59,10 @@ header {
 /* Slideshow container */
 .slideshow {
     position: relative;
-    width: 85%; /* Increased image container width */
-    max-width: 1100px; /* Max width for larger images */
-    margin: 30px auto 0 auto; /* Added top margin to lower the image */
+    width: 90%; /* Fit image within 90% of the viewport */
+    max-width: 800px; /* Restrict max width */
+    height: auto;
+    margin: 20px auto;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -74,23 +74,28 @@ header {
 
 /* Individual slides */
 .slide {
+    max-width: 100%; /* Contain image within container width */
+    max-height: 75vh; /* Scale down for tall images */
     width: auto;
     height: auto;
-    max-width: 100%; /* Scale image to fit container width */
-    max-height: 600px; /* Limit height for tall images */
     margin: auto;
-    object-fit: contain;
+    object-fit: contain; /* Maintain aspect ratio */
+    display: none; /* Hide all images by default */
 }
 
-/* Footer Styling */
+.slide.active {
+    display: block; /* Show only the active image */
+}
+
+/* Footer styling */
 footer {
     width: 100%;
     padding: 10px;
     text-align: center;
-    font-size: 0.9em;
-    color: #aaa; /* Lighter, subtle font color */
+    font-size: 0.8em; /* Slightly smaller text */
+    color: #aaa; /* Subtle font color */
     font-family: 'Open Sans', sans-serif;
-    margin-top: auto; /* Push footer to the bottom */
+    margin-top: auto;
 }
 
 /* Responsive Styling */
@@ -117,11 +122,11 @@ footer {
         text-align: center;
     }
 
-    .nav-links a {
-        font-size: 0.8em;
-    }
-
     .slideshow {
         max-width: 100%;
+    }
+
+    .nav-links a {
+        font-size: 0.8em;
     }
 }
