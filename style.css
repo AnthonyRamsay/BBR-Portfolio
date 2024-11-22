@@ -59,17 +59,22 @@ header {
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
+    font-size: 2rem;
     padding: 10px;
     cursor: pointer;
     z-index: 10;
 }
 
 .arrow.left {
-    left: 0;
+    left: -60px; /* Move it further out */
 }
 
 .arrow.right {
-    right: 0;
+    right: -60px; /* Move it further out */
+}
+
+.arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Footer */
