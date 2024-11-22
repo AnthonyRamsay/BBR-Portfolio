@@ -13,5 +13,10 @@ document.addEventListener('DOMContentLoaded', () => {
         updateSlide(currentIndex);
     }
 
-    updateSlide(currentIndex); // Show the first slide
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'ArrowLeft') changeSlide(-1);
+        if (event.key === 'ArrowRight') changeSlide(1);
+    });
+
+    updateSlide(currentIndex);
 });
