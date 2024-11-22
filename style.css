@@ -1,61 +1,62 @@
+/* Reset some base styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* Container to center everything in the viewport */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh; /* Full height viewport */
+  overflow: hidden; /* Prevent scrolling */
+  text-align: center;
+}
+
+/* Image styling to make sure it fits properly */
+img {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto; /* Keep aspect ratio */
+  width: auto; /* Keep aspect ratio */
+  display: block;
+  margin: auto;
+  object-fit: contain; /* Keep the whole image visible */
+}
+
+/* General styling for better readability */
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #ffffff;
-    text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0; /* Light grey background */
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    max-width: 900px;
-    margin: 0 auto;
+/* Styling for navigation links */
+nav {
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 
-.name {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.nav-links a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #000;
-    transition: color 0.3s;
-}
-
-.nav-links a:hover {
-    color: #555;
-}
-
-.slideshow-container {
-    position: relative;
-    max-width: 800px;
-    margin: 40px auto;
-}
-
-.arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 24px;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-.arrow.left {
-    left: 0;
-}
-
-.arrow.right {
-    right: 0;
+nav a {
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+  color: #000;
 }
 
 footer {
-    padding: 20px;
-    font-size: 14px;
-    color: #888;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  color: #888;
 }
