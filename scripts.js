@@ -8,6 +8,17 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     };
 
+    const changeSlide = (direction) => {
+        currentIndex = (currentIndex + direction + slides.length) % slides.length;
+        updateSlide(currentIndex);
+    };
+
+    // Add keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') changeSlide(-1);
+        if (e.key === 'ArrowRight') changeSlide(1);
+    });
+
     // Swipe functionality
     let startX = 0;
     let endX = 0;
@@ -28,11 +39,6 @@ document.addEventListener("DOMContentLoaded", () => {
             changeSlide(-1);
         }
     });
-
-    const changeSlide = (direction) => {
-        currentIndex = (currentIndex + direction + slides.length) % slides.length;
-        updateSlide(currentIndex);
-    };
 
     updateSlide(currentIndex); // Initialize the first slide
 });
