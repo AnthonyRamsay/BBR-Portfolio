@@ -16,17 +16,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Function to show the previous slide
-    function showPreviousSlide() {
+    function showPrevSlide() {
         currentSlide = (currentSlide - 1 + slides.length) % slides.length; // Loop back to the last slide
         updateSlide(currentSlide);
     }
 
-    // Attach keyboard event listeners
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowRight') {
-            showNextSlide();
-        } else if (e.key === 'ArrowLeft') {
-            showPreviousSlide();
-        }
-    });
+    // Attach click events to the arrows
+    document.querySelector('.arrow.left').addEventListener('click', showPrevSlide);
+    document.querySelector('.arrow.right').addEventListener('click', showNextSlide);
+
+    // Initialize the first slide
+    updateSlide(currentSlide);
 });
