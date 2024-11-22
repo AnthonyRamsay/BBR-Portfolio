@@ -88,6 +88,7 @@ header {
     justify-content: center;
     cursor: pointer;
     z-index: 10;
+    font-size: 1.5rem;
 }
 
 .arrow.left {
@@ -96,6 +97,10 @@ header {
 
 .arrow.right {
     right: -60px;
+}
+
+.arrow:hover {
+    background: rgba(0, 0, 0, 0.8);
 }
 
 /* Footer */
