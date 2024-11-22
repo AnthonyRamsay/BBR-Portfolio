@@ -13,10 +13,11 @@ document.addEventListener('DOMContentLoaded', () => {
         updateSlide(currentIndex);
     }
 
-    document.addEventListener('keydown', (event) => {
-        if (event.key === 'ArrowLeft') changeSlide(-1);
-        if (event.key === 'ArrowRight') changeSlide(1);
+    // Keyboard Navigation
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') changeSlide(-1);
+        if (e.key === 'ArrowRight') changeSlide(1);
     });
 
-    updateSlide(currentIndex);
+    updateSlide(currentIndex); // Show initial slide
 });
