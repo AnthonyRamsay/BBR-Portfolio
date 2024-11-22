@@ -1,3 +1,6 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
 /* Reset default margin/padding */
 * {
     margin: 0;
@@ -7,15 +10,15 @@
 
 /* General body styling */
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif; /* Clean and modern font */
     background-color: white;
     color: #333;
     line-height: 1.6;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    min-height: 100vh; /* Ensures footer is at the bottom */
+    justify-content: center;
+    padding: 0;
 }
 
 /* Header styling */
@@ -29,11 +32,17 @@ header {
 
 /* Logo styling */
 .logo a {
-    text-decoration: none;
-    font-family: 'Arial Black', sans-serif;
-    text-transform: uppercase;
-    color: black;
-    font-weight: bold;
+    text-decoration: none; /* Removes underline */
+    font-family: 'Arial Black', sans-serif; /* Bold, clean look */
+    text-transform: uppercase; /* Make it all caps */
+    color: black; /* Always black */
+    font-weight: bold; /* Keep it bold */
+}
+
+.logo a:visited,
+.logo a:hover,
+.logo a:focus {
+    color: black; /* Prevent color change on click or hover */
 }
 
 /* Navigation links styling */
@@ -43,90 +52,86 @@ header {
 }
 
 .nav-links a {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1em;
+    font-family: 'Open Sans', sans-serif; /* Match body font */
+    font-size: 1em; /* Easy-to-read size */
     color: #333;
-    text-decoration: none;
+    text-decoration: none; /* No underline */
     margin-left: 15px;
-    font-weight: 400;
-    transition: color 0.3s ease;
+    font-weight: 400; /* Regular weight (not bold) */
+    transition: color 0.3s ease; /* Smooth hover effect */
 }
 
 .nav-links a:hover {
-    color: #666;
+    color: #666; /* Slightly darker on hover for subtle effect */
 }
 
 /* Slideshow container */
 .slideshow {
     position: relative;
-    width: 90%; /* Fit image within 90% of the viewport */
-    max-width: 800px; /* Restrict max width */
-    height: auto;
+    max-width: 800px; /* Adjusted to a reasonable width */
+    max-height: 600px; /* Maintain container height */
     margin: 20px auto;
-    overflow: hidden;
+    overflow: hidden; /* Hide overflow to prevent excess display */
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f5f5f5;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: #f5f5f5; /* Neutral background color */
 }
 
-/* Individual slides */
+/* Slideshow images */
 .slide {
-    max-width: 100%; /* Contain image within container width */
-    max-height: 75vh; /* Scale down for tall images */
-    width: auto;
-    height: auto;
-    margin: auto;
-    object-fit: contain; /* Maintain aspect ratio */
-    display: none; /* Hide all images by default */
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Ensure images scale to fit container */
+    opacity: 0; /* Hidden by default */
+    transition: opacity 1s ease-in-out; /* Smooth fade-in transition */
 }
 
 .slide.active {
-    display: block; /* Show only the active image */
+    opacity: 1; /* Show the active image */
 }
 
-/* Left and right arrow buttons */
+/* Arrow styling */
 .arrow {
     position: absolute;
-    top: 50%;
+    top: 50%; /* Center vertically */
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
     color: white;
     border: none;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 24px;
     cursor: pointer;
-    font-size: 1.5em;
+    z-index: 10; /* Ensure arrows are above other elements */
     transition: background-color 0.3s ease;
 }
 
 .arrow:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.7); /* Darker background on hover */
 }
 
 .arrow.left {
-    left: -50px; /* Position left arrow outside the container */
+    left: -70px; /* Position to the left, outside the image */
 }
 
 .arrow.right {
-    right: -50px; /* Position right arrow outside the container */
+    right: -70px; /* Position to the right, outside the image */
 }
 
-/* Footer styling */
+/* Footer Styling */
 footer {
-    width: 100%;
+    margin-top: 40px;
     padding: 10px;
     text-align: center;
-    font-size: 0.8em; /* Slightly smaller text */
-    color: #aaa; /* Subtle font color */
-    font-family: 'Open Sans', sans-serif;
-    margin-top: auto;
+    font-size: 0.9em;
+    color: #999; /* Softer tone for footer */
+    font-family: 'Open Sans', sans-serif; /* Keep consistent with body text */
 }
 
 /* Responsive Styling */
@@ -134,23 +139,16 @@ footer {
 /* For tablets (width ≤ 768px) */
 @media (max-width: 768px) {
     .slideshow {
-        max-width: 90%; /* Adjust for smaller screens */
-    }
-
-    .logo {
-        font-size: 20px;
-    }
-
-    .nav-links a {
-        font-size: 0.9em;
+        max-width: 600px; /* Adjust width for smaller screens */
+        max-height: 400px; /* Adjust height */
     }
 
     .arrow.left {
-        left: -30px; /* Adjust arrow positions for smaller screens */
+        left: -50px; /* Adjust for smaller screens */
     }
 
     .arrow.right {
-        right: -30px;
+        right: -50px;
     }
 }
 
@@ -162,50 +160,11 @@ footer {
     }
 
     .slideshow {
-        max-width: 100%;
+        max-width: 300px; /* Adjust for very small screens */
+        max-height: 200px;
     }
 
     .nav-links a {
         font-size: 0.8em;
     }
-
-    .arrow.left {
-        left: -20px;
-    }
-
-    .arrow.right {
-        right: -20px;
-    }
-}
-
-/* Arrows styling */
-.arrow {
-    position: absolute;
-    top: 50%; /* Center vertically */
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    cursor: pointer;
-    z-index: 10; /* Place above everything else */
-    transition: background-color 0.3s ease;
-}
-
-.arrow:hover {
-    background-color: rgba(0, 0, 0, 0.7); /* Darker on hover */
-}
-
-.arrow.left {
-    left: 10px; /* Position to the left */
-}
-
-.arrow.right {
-    right: 10px; /* Position to the right */
 }
