@@ -61,7 +61,7 @@
         .slideshow {
             position: relative;
             width: 100%;
-            height: 500px;
+            height: auto;
             overflow: hidden;
         }
 
@@ -78,32 +78,6 @@
             margin: 0 auto;
         }
 
-        .arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(245, 245, 245, 0.8);
-            color: #333;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            font-size: 24px;
-            border-radius: 50%;
-            transition: background 0.3s ease;
-        }
-
-        .arrow:hover {
-            background: rgba(245, 245, 245, 1);
-        }
-
-        .arrow.left {
-            left: -60px;
-        }
-
-        .arrow.right {
-            right: -60px;
-        }
-
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
@@ -118,14 +92,6 @@
             .nav-links a {
                 display: block;
                 margin-bottom: 10px;
-            }
-
-            .arrow.left {
-                left: 10px;
-            }
-
-            .arrow.right {
-                right: 10px;
             }
         }
 
@@ -152,13 +118,11 @@
 
     <main>
         <div class="slideshow-container">
-            <button class="arrow left" onclick="changeSlide(-1)">&#10094;</button>
             <div class="slideshow">
                 <img src="images/image1.jpg" alt="Slide 1" class="slide active">
                 <img src="images/image2.jpg" alt="Slide 2" class="slide">
                 <img src="images/image3.jpg" alt="Slide 3" class="slide">
             </div>
-            <button class="arrow right" onclick="changeSlide(1)">&#10095;</button>
         </div>
     </main>
 
