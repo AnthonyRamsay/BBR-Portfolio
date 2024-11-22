@@ -13,6 +13,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
 /* Header styling */
@@ -51,24 +53,28 @@ header {
 .slideshow {
     position: relative;
     max-width: 800px;
-    height: auto;
-    margin: 20px auto;
+    height: 500px; /* Fixed height for consistency */
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .slide {
-    display: none;
+    position: absolute;
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: contain;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
 }
 
 .slide.active {
-    display: block;
+    opacity: 1;
 }
 
+/* Arrow styling */
 .arrow {
     position: absolute;
     top: 50%;
