@@ -4,7 +4,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const updateSlide = (index) => {
         slides.forEach((slide, i) => {
-            slide.classList.toggle('active', i === index);
+            if (i === index) {
+                slide.classList.add('active');
+                slide.classList.add('fade-in');
+            } else {
+                slide.classList.remove('active');
+                slide.classList.remove('fade-in');
+            }
         });
     };
 
@@ -39,6 +45,12 @@ document.addEventListener("DOMContentLoaded", () => {
             changeSlide(-1);
         }
     });
+
+    // Mobile nav toggle
+    const toggleNav = () => {
+        document.querySelector('.nav-links').classList.toggle('nav-open');
+    };
+    window.toggleNav = toggleNav;
 
     updateSlide(currentIndex); // Initialize the first slide
 });
