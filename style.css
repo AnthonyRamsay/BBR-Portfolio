@@ -1,23 +1,21 @@
-/* General Reset */
+/* Reset default margin/padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body Styling */
+/* General body styling */
 body {
     font-family: 'Open Sans', sans-serif;
     background-color: white;
     color: #333;
-    line-height: 1.6;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    min-height: 100vh;
+    align-items: center;
 }
 
-/* Header Styling */
+/* Header styling */
 header {
     width: 100%;
     padding: 20px;
@@ -26,6 +24,7 @@ header {
     align-items: center;
 }
 
+/* Logo styling */
 .logo a {
     text-decoration: none;
     font-family: 'Arial Black', sans-serif;
@@ -34,39 +33,36 @@ header {
     font-weight: bold;
 }
 
-.nav-links {
-    display: flex;
-    gap: 20px;
-}
-
+/* Navigation links styling */
 .nav-links a {
-    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
     color: #333;
-    font-weight: normal;
-    font-size: 1rem;
+    text-decoration: none;
+    margin-left: 15px;
+    transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #555;
+    color: #666;
 }
 
-/* Slideshow */
+/* Slideshow container */
 .slideshow {
     position: relative;
-    max-width: 80%; /* Image scales to fit within 80% of the viewport width */
-    margin: auto;
-    overflow: hidden;
+    max-width: 800px;
+    height: auto;
+    margin: 20px auto;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .slide {
-    width: 100%;
-    max-height: 70vh; /* Keep images within 70% of the viewport height */
-    object-fit: contain;
     display: none;
-    transition: opacity 0.5s ease-in-out;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
 .slide.active {
@@ -77,36 +73,33 @@ header {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 10px 15px;
     cursor: pointer;
     z-index: 10;
     font-size: 1.5rem;
 }
 
 .arrow.left {
-    left: -60px;
+    left: -40px;
 }
 
 .arrow.right {
-    right: -60px;
+    right: -40px;
 }
 
 .arrow:hover {
-    background: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Footer */
+/* Footer Styling */
 footer {
+    margin-top: auto;
+    padding: 10px;
     text-align: center;
-    font-size: 0.8rem;
+    font-size: 0.9em;
     color: #aaa;
-    margin-top: 20px;
+    font-family: 'Open Sans', sans-serif;
 }
