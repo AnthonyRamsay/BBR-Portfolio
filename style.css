@@ -1,15 +1,17 @@
-/* Reset */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* General */
+/* Body */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #fff;
+    color: #000;
+    line-height: 1.6;
     text-align: center;
-    background-color: white;
 }
 
 /* Header */
@@ -24,62 +26,67 @@ header {
     font-size: 24px;
     font-weight: bold;
     text-decoration: none;
-    color: black;
+    color: #000;
 }
 
 .nav-links a {
-    margin-left: 20px;
+    margin: 0 10px;
     text-decoration: none;
-    color: #333;
+    color: #000;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
 }
 
 /* Slideshow */
 .slideshow {
     position: relative;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 50px auto;
+    overflow: hidden;
 }
 
-.slide {
+.slideshow img {
     display: none;
     width: 100%;
-    max-height: 500px;
+    max-height: 600px;
     object-fit: contain;
 }
 
-.slide.active {
+.slideshow img.active {
     display: block;
 }
 
-/* Arrows */
 .arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    font-size: 30px;
+    color: #000;
+    background: none;
     border: none;
-    font-size: 2rem;
-    padding: 10px;
     cursor: pointer;
+    padding: 0 15px;
     z-index: 10;
 }
 
 .arrow.left {
-    left: -60px; /* Move it further out */
+    left: -40px;
 }
 
 .arrow.right {
-    right: -60px; /* Move it further out */
+    right: -40px;
 }
 
 .arrow:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0.7;
 }
 
 /* Footer */
 footer {
-    margin-top: 20px;
-    color: #777;
-    font-size: 0.9rem;
+    margin-top: 30px;
+    font-size: 12px;
+    color: #aaa;
 }
