@@ -1,7 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
     const slides = document.querySelectorAll('.slide');
-    const leftArrow = document.querySelector('.arrow.left');
-    const rightArrow = document.querySelector('.arrow.right');
     let currentSlide = 0;
 
     // Function to update the active slide
@@ -19,23 +17,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to show the previous slide
     function showPreviousSlide() {
-        currentSlide = (currentSlide - 1 + slides.length) % slides.length; // Loop to the last slide
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length; // Loop back to the last slide
         updateSlide(currentSlide);
     }
 
-    // Event listeners for arrows
-    leftArrow.addEventListener('click', showPreviousSlide);
-    rightArrow.addEventListener('click', showNextSlide);
-
-    // Event listeners for keyboard
-    document.addEventListener('keydown', (event) => {
-        if (event.key === 'ArrowRight') {
+    // Attach keyboard event listeners
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') {
             showNextSlide();
-        } else if (event.key === 'ArrowLeft') {
+        } else if (e.key === 'ArrowLeft') {
             showPreviousSlide();
         }
     });
-
-    // Initialize the first slide
-    updateSlide(currentSlide);
 });
