@@ -15,6 +15,15 @@ document.addEventListener('DOMContentLoaded', () => {
         updateSlide(currentSlide);
     };
 
+    // Keyboard Navigation
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'ArrowLeft') {
+            changeSlide(-1);
+        } else if (event.key === 'ArrowRight') {
+            changeSlide(1);
+        }
+    });
+
     // Initialize first slide
     updateSlide(currentSlide);
 });
