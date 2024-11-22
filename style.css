@@ -90,3 +90,15 @@ footer {
     font-size: 12px;
     color: #aaa;
 }
+
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column; /* Stack links vertically */
+        text-align: center;    /* Center align the links */
+    }
+
+    .nav-links a {
+        font-size: 14px; /* Smaller font size for mobile */
+        margin: 8px 0;   /* Add spacing between links */
+    }
+}
