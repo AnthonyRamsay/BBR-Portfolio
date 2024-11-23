@@ -1,84 +1,21 @@
-/* Reset some base styles */
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-}
-
-/* Container to center everything in the viewport */
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 80vh; /* Adjusted height for better alignment */
-    overflow: hidden; /* Prevent scrolling */
-    text-align: center;
-}
-
-/* Image styling to make sure it fits properly */
-img {
-    max-width: 80%;
-    max-height: 80%;
-    height: auto; /* Keep aspect ratio */
-    width: auto; /* Keep aspect ratio */
-    display: block;
-    margin: auto;
-    object-fit: contain; /* Keep the whole image visible */
-}
-
-/* General styling for better readability */
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f0f0f0; /* Light grey background */
-}
-
 /* Styling for navigation links */
 .social-links {
     display: flex;
     gap: 1rem;
     font-weight: 300; /* Reduced font weight for more subtle links */
-    align-items: center; /* Vertically align the links */
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem; /* Adjusted from 1rem to give more breathing room */
+    padding-right: 0.5rem; /* Additional padding to prevent cutting off */
 }
 
-/* Styling for name and links */
+/* Header styling to ensure alignment */
 .header-content {
     display: flex;
     align-items: center; /* Ensure name and links are on the same level */
     justify-content: space-between;
     width: 100%;
-    padding: 1rem;
-}
-
-.name {
-    font-size: 1.5rem;
-    font-weight: 700; /* Bold for strong emphasis on name */
-    margin-left: 1rem;
-    display: flex;
-    align-items: center; /* Ensure "Anthony Ramsay" is centered vertically */
-}
-
-/* Link styling */
-a {
-    text-decoration: none;
-    color: #333; /* Neutral color for demure look */
-    transition: color 0.2s ease; /* Smooth transition for hover effect */
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Footer styling */
-footer {
-    font-size: 0.9rem;
-    position: fixed;
-    bottom: 1rem;
-    width: 100%;
-    text-align: center;
-    color: #666;
+    padding: 1rem 2rem; /* Added padding to the sides for even spacing */
 }
 
 /* Styling for smaller screens */
@@ -86,6 +23,7 @@ footer {
     .social-links {
         gap: 0.5rem; /* Reduce spacing between links on smaller screens */
         font-size: 0.9rem; /* Slightly smaller font size on mobile */
+        right: 1rem; /* Adjust right padding for small screens */
     }
     .name {
         font-size: 1.3rem; /* Slightly reduce name size to balance with links */
