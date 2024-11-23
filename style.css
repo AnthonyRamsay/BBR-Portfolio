@@ -38,30 +38,26 @@ body {
     background-color: #f0f0f0; /* Light grey background */
 }
 
-/* Styling for navigation links */
-.social-links {
-    display: flex;
-    gap: 1rem;
-    font-weight: 300; /* Reduced font weight for more subtle links */
-    position: absolute;
-    top: 1rem;
-    right: 1.5rem; /* Adjusted from 1rem to give more breathing room */
-    padding-right: 0.5rem; /* Additional padding to prevent cutting off */
-}
-
-/* Styling for name and links */
+/* Styling for header and navigation links */
 .header-content {
     display: flex;
-    align-items: center; /* Ensure name and links are on the same level */
+    align-items: center; /* Align items centrally */
     justify-content: space-between;
     width: 100%;
-    padding: 1rem 2rem; /* Added padding to the sides for even spacing */
+    padding: 1rem 2rem; /* Padding for consistency */
 }
 
 .name {
     font-size: 1.5rem;
-    font-weight: 700; /* Bold for strong emphasis on name */
-    margin-left: 1rem;
+    font-weight: 700; /* Bold for emphasis on name */
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    font-weight: 300; /* More subtle links */
+    align-items: center; /* Ensure alignment consistency */
+    margin-left: auto; /* Push links to the far right */
 }
 
 /* Link styling */
@@ -89,9 +85,12 @@ footer {
     .social-links {
         gap: 0.5rem; /* Reduce spacing between links on smaller screens */
         font-size: 0.9rem; /* Slightly smaller font size on mobile */
-        right: 1rem; /* Adjust right padding for small screens */
     }
     .name {
         font-size: 1.3rem; /* Slightly reduce name size to balance with links */
+    }
+    .header-content {
+        flex-direction: row; /* Ensure everything stays in one line */
+        padding: 0.5rem 1rem; /* Smaller padding for small screens */
     }
 }
