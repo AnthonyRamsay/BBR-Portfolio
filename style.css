@@ -7,6 +7,36 @@ body, html {
     box-sizing: border-box;
 }
 
+/* General styling for better readability */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f0f0; /* Light grey background */
+}
+
+/* Header container */
+.header-content {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    right: 1rem;
+    display: flex;
+    align-items: center; /* Ensure alignment consistency */
+    justify-content: space-between;
+}
+
+/* Styling for navigation links */
+.social-links {
+    display: flex;
+    gap: 1rem;
+    font-weight: 300; /* More subtle links */
+}
+
+/* Styling for name */
+.name {
+    font-size: 1.5rem;
+    font-weight: 700; /* Bold for emphasis on name */
+}
+
 /* Container to center everything in the viewport */
 .container {
     display: flex;
@@ -27,37 +57,6 @@ img {
     display: block;
     margin: auto;
     object-fit: contain; /* Keep the whole image visible */
-}
-
-/* General styling for better readability */
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f0f0f0; /* Light grey background */
-}
-
-/* Styling for header and navigation links */
-.header-content {
-    display: flex;
-    align-items: center; /* Align items centrally */
-    justify-content: space-between;
-    width: 100%;
-    padding: 1rem 2rem; /* Padding for consistency */
-}
-
-.name {
-    font-size: 1.5rem;
-    font-weight: 700; /* Bold for emphasis on name */
-}
-
-.social-links {
-    display: flex;
-    gap: 1rem;
-    font-weight: 300; /* More subtle links */
-    align-items: center; /* Ensure alignment consistency */
-    margin-left: auto; /* Push links to the far right */
 }
 
 /* Link styling */
@@ -88,9 +87,5 @@ footer {
     }
     .name {
         font-size: 1.3rem; /* Slightly reduce name size to balance with links */
-    }
-    .header-content {
-        flex-direction: row; /* Ensure everything stays in one line */
-        padding: 0.5rem 1rem; /* Smaller padding for small screens */
     }
 }
