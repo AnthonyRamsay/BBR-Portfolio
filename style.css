@@ -29,12 +29,15 @@ body {
     display: flex;
     gap: 1rem;
     font-weight: 300; /* More subtle links */
+    align-items: center; /* Vertical alignment for the icons */
 }
 
 /* Styling for name */
 .name {
     font-size: 1.5rem;
     font-weight: 700; /* Bold for emphasis on name */
+    display: flex;
+    align-items: center; /* Aligns "Anthony Ramsay" vertically with icons */
 }
 
 /* Container to center everything in the viewport */
@@ -69,6 +72,16 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Icon styling */
+.social-links i {
+    font-size: 1.1rem; /* Adjust size of icons */
+    transition: color 0.2s ease-in-out; /* Add a smooth transition */
+}
+
+.social-links a:hover i {
+    color: #555; /* Change color on hover to add subtle feedback */
+}
+
 /* Footer styling */
 footer {
     font-size: 0.9rem;
@@ -87,5 +100,8 @@ footer {
     }
     .name {
         font-size: 1.3rem; /* Slightly reduce name size to balance with links */
+    }
+    .social-links i {
+        font-size: 1rem; /* Reduce icon size on smaller screens */
     }
 }
