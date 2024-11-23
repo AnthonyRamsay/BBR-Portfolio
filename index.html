@@ -1,134 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anthony Ramsay Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
-  <style>
-    /* No changes to current look, preserving style */
-    body {
-      font-family: 'Roboto', sans-serif;
-      background-color: #f4f4f4;
-      text-align: center;
-      margin: 0;
-    }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem;
-      font-weight: 700;
-    }
-    .social-links {
-      display: flex;
-      gap: 1rem;
-    }
-    .social-links a {
-      text-decoration: none;
-      color: black;
-    }
-    /* Image scaling */
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 2rem;
-    }
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-    }
-    footer {
-      margin-top: 2rem;
-    }
-    /* Responsive nav dropdown for smaller screens */
-    .dropdown {
-      display: none;
-      flex-direction: column;
-      align-items: flex-start;
-      position: absolute;
-      top: 3rem;
-      right: 1rem;
-      background-color: white;
-      box-shadow: 0px 8px 15px rgba(0,0,0,0.1);
-      border-radius: 5px;
-      padding: 0.5rem;
-    }
-    .dropdown a {
-      padding: 0.5rem;
-      color: black;
-      width: 100%;
-      text-align: left;
-      text-decoration: none;
-    }
-    .hamburger {
-      display: none;
-      cursor: pointer;
-      flex-direction: column;
-      gap: 4px;
-      border: none;
-      background: none;
-    }
-    .hamburger span {
-      display: block;
-      width: 24px;
-      height: 3px;
-      background-color: black;
-    }
-    @media (max-width: 768px) {
-      header {
-        justify-content: space-between;
-      }
-      .social-links {
-        display: none;
-      }
-      .hamburger {
-        display: flex;
-      }
-      .dropdown.open {
-        display: flex;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anthony Ramsay Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <div>Anthony Ramsay</div>
-    <button class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+    <header>Anthony Ramsay</header>
+    
     <div class="social-links">
-      <a href="work.pdf" target="_blank">Work</a>
-      <a href="https://twitter.com/ramsayalmighty" target="_blank">Twitter</a>
-      <a href="https://instagram.com/ramsayalmighty" target="_blank">Instagram</a>
-      <a href="mailto:builtbyramsay@gmail.com">Email</a>
+        <a href="work.pdf" target="_blank">Work</a>
+        <a href="https://twitter.com/ramsayalmighty" target="_blank">Twitter</a>
+        <a href="https://instagram.com/ramsayalmighty" target="_blank">Instagram</a>
+        <a href="mailto:builtbyramsay@gmail.com">Email</a>
     </div>
-    <div class="dropdown" id="dropdown">
-      <a href="work.pdf" target="_blank">Work</a>
-      <a href="https://twitter.com/ramsayalmighty" target="_blank">Twitter</a>
-      <a href="https://instagram.com/ramsayalmighty" target="_blank">Instagram</a>
-      <a href="mailto:builtbyramsay@gmail.com">Email</a>
-    </div>
-  </header>
-  <main class="container">
-    <img src="images/example.png" alt="Anthony Ramsay Work Example">
-  </main>
-  <footer>
-    &copy; 2024 Studio by Ramsay
-  </footer>
-  <script>
-    const hamburger = document.getElementById('hamburger');
-    const dropdown = document.getElementById('dropdown');
-    hamburger.addEventListener('click', () => {
-      dropdown.classList.toggle('open');
-    });
-  </script>
+
+    <main class="container">
+        <img src="images/example.jpg" alt="Anthony Ramsay Work Example">
+    </main>
+
+    <footer>© 2024 Studio by Ramsay</footer>
 </body>
 </html>
