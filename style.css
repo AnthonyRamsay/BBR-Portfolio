@@ -1,62 +1,76 @@
 /* Reset some base styles */
 body, html {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
 }
 
 /* Container to center everything in the viewport */
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh; /* Full height viewport */
-  overflow: hidden; /* Prevent scrolling */
-  text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80vh; /* Full height viewport */
+    overflow: hidden; /* Prevent scrolling */
+    text-align: center;
 }
 
 /* Image styling to make sure it fits properly */
 img {
-  max-width: 100%;
-  max-height: 100%;
-  height: auto; /* Keep aspect ratio */
-  width: auto; /* Keep aspect ratio */
-  display: block;
-  margin: auto;
-  object-fit: contain; /* Keep the whole image visible */
+    max-width: 100%;
+    max-height: 100%;
+    height: auto; /* Keep aspect ratio */
+    width: auto; /* Keep aspect ratio */
+    display: block;
+    margin: auto;
+    object-fit: contain; /* Keep the whole image visible */
 }
 
 /* General styling for better readability */
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f0f0f0; /* Light grey background */
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; /* Light grey background */
+    flex-direction: column;
 }
 
 /* Styling for navigation links */
-nav {
-  position: absolute;
-  top: 10px;
-  right: 10px;
+.social-links {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    gap: 1rem;
 }
 
-nav a {
-  text-decoration: none;
-  margin: 0 10px;
-  font-weight: bold;
-  color: #000;
+.social-links a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
 }
 
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+/* Header styling */
+header {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Footer styling */
 footer {
-  position: absolute;
-  bottom: 10px;
-  width: 100%;
-  text-align: center;
-  font-size: 12px;
-  color: #888;
+    position: fixed;
+    bottom: 1rem;
+    font-size: 0.875rem;
+    color: #666;
 }
