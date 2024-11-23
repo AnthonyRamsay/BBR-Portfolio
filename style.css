@@ -40,8 +40,10 @@ body {
     display: flex;
     gap: 1rem;
     font-weight: 300; /* Reduced font weight for more subtle links */
-    position: relative; /* Changed from absolute to relative */
-    margin-right: 1rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    flex-wrap: nowrap; /* Prevent wrapping of links */
 }
 
 /* Styling for name and links */
@@ -53,30 +55,17 @@ body {
     padding: 1rem;
 }
 
-/* Styling for smaller screens */
-@media (max-width: 768px) {
-    .header-content {
-        flex-direction: column;
-        align-items: center;
-    }
-    .name {
-        margin-bottom: 0.5rem;
-    }
-    .social-links {
-        flex-direction: row;
-        justify-content: center;
-    }
-}
-
 .name {
     font-size: 1.5rem;
     font-weight: 700; /* Bold for strong emphasis on name */
+    margin-left: 1rem;
 }
 
 /* Link styling */
 a {
     text-decoration: none;
     color: #333; /* Neutral color for demure look */
+    transition: color 0.2s ease; /* Smooth transition for hover effect */
 }
 
 a:hover {
@@ -91,4 +80,15 @@ footer {
     width: 100%;
     text-align: center;
     color: #666;
+}
+
+/* Styling for smaller screens */
+@media (max-width: 768px) {
+    .social-links {
+        gap: 0.5rem; /* Reduce spacing between links on smaller screens */
+        font-size: 0.9rem; /* Slightly smaller font size on mobile */
+    }
+    .name {
+        font-size: 1.3rem; /* Slightly reduce name size to balance with links */
+    }
 }
