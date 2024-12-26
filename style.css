@@ -106,3 +106,35 @@ footer {
         font-size: 1rem; /* Reduce icon size on smaller screens */
     }
 }
+
+/* Icon styling */
+.social-links i {
+    font-size: 1.1rem; /* Adjust size of icons */
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+.social-links a:hover i {
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* Platform-specific hover colors */
+.social-links a[href*="twitter"]:hover i {
+    color: #1DA1F2; /* Twitter Blue */
+}
+
+.social-links a[href*="instagram"]:hover i {
+    color: #E1306C; /* Instagram Pink */
+}
+
+.social-links a[href*="youtube"]:hover i {
+    color: #FF0000; /* YouTube Red */
+}
+
+.social-links a[href*="twitch"]:hover i {
+    color: #6441A4; /* Twitch Purple */
+}
+
+.social-links a[href*="mailto"]:hover i {
+    color: #0072C6; /* Subtle Blue for Email */
+}
+
